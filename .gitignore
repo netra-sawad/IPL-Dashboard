@@ -31,6 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+node_modules
+note.txt
 
 ### Reat app ###
 src/frontend/node_modules/
