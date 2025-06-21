@@ -1,18 +1,19 @@
-.HomePage{
-    .app-name{
-        font-size: 3rem;
-        margin: 30px auto;
-    }
-    .team-grid{
-        display: grid;
-        grid-template-columns:1fr 1fr ;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+.HomePage {
+  .app-name {
+    font-size: 3rem;
+    margin: 30px auto;
+  }
 
-        // & > div{
-        //     justify-self: center;
-        //     align-self: center;
-        //     text-align: center;
-        // }
-    }
+  .team-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    // & > div{
+    //     justify-self: center;
+    //     align-self: center;
+    //     text-align: center;
+    // }
+  }
 }   

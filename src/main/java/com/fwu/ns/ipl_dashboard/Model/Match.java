@@ -20,10 +20,11 @@ public class Match {
     private String matchWinner;
     private String result;
     private String resultMargin;
+    private String targetRuns;
+    private String targetOvers;
     private String method;
     private String umpire1;
     private String umpire2;
-
     public Long getId() {
         return id;
     }
@@ -96,6 +97,18 @@ public class Match {
     public void setResultMargin(String resultMargin) {
         this.resultMargin = resultMargin;
     }
+    public String getTargetRuns() {
+        return targetRuns;
+    }
+    public void setTargetRuns(String targetRuns) {
+        this.targetRuns = targetRuns;
+    }
+    public String getTargetOvers() {
+        return targetOvers;
+    }
+    public void setTargetOvers(String targetOvers) {
+        this.targetOvers = targetOvers;
+    }
     public String getMethod() {
         return method;
     }
@@ -115,6 +128,5 @@ public class Match {
         this.umpire2 = umpire2;
     }
 
-    
     
 }

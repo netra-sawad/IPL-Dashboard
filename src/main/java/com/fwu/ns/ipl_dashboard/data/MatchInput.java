@@ -2,11 +2,13 @@ package com.fwu.ns.ipl_dashboard.data;
 
 public class MatchInput {
     private String id;
+    private String season;
     private String city;
     private String date;
+    private String match_type;
     private String player_of_match;
     private String venue;
-    private String neutral_venue;
+    // private String neutral_venue;
     private String team1;
     private String team2;
     private String toss_winner;
@@ -14,15 +16,25 @@ public class MatchInput {
     private String winner;
     private String result;
     private String result_margin;
-    private String eliminator;
+    private String target_runs;
+    private String target_overs;
+    private String super_over;
+    // private String eliminator;
     private String method;
     private String umpire1;
-    private String umpire;
+    private String umpire2;
+
     public String getId() {
         return id;
     }
     public void setId(String id) {
         this.id = id;
+    }
+    public String getSeason() {
+        return season;
+    }
+    public void setSeason(String season) {
+        this.season = season;
     }
     public String getCity() {
         return city;
@@ -36,6 +48,12 @@ public class MatchInput {
     public void setDate(String date) {
         this.date = date;
     }
+    public String getMatch_type() {
+        return match_type;
+    }
+    public void setMatch_type(String match_type) {
+        this.match_type = match_type;
+    }
     public String getPlayer_of_match() {
         return player_of_match;
     }
@@ -47,12 +65,6 @@ public class MatchInput {
     }
     public void setVenue(String venue) {
         this.venue = venue;
-    }
-    public String getNeutral_venue() {
-        return neutral_venue;
-    }
-    public void setNeutral_venue(String neutral_venue) {
-        this.neutral_venue = neutral_venue;
     }
     public String getTeam1() {
         return team1;
@@ -96,11 +108,23 @@ public class MatchInput {
     public void setResult_margin(String result_margin) {
         this.result_margin = result_margin;
     }
-    public String getEliminator() {
-        return eliminator;
+    public String getTarget_runs() {
+        return target_runs;
     }
-    public void setEliminator(String eliminator) {
-        this.eliminator = eliminator;
+    public void setTarget_runs(String target_runs) {
+        this.target_runs = target_runs;
+    }
+    public String getTarget_overs() {
+        return target_overs;
+    }
+    public void setTarget_overs(String target_overs) {
+        this.target_overs = target_overs;
+    }
+    public String getSuper_over() {
+        return super_over;
+    }
+    public void setSuper_over(String super_over) {
+        this.super_over = super_over;
     }
     public String getMethod() {
         return method;
@@ -114,14 +138,10 @@ public class MatchInput {
     public void setUmpire1(String umpire1) {
         this.umpire1 = umpire1;
     }
-    public String getUmpire() {
-        return umpire;
+    public String getUmpire2() {
+        return umpire2;
     }
-    public void setUmpire(String umpire) {
-        this.umpire = umpire;
+    public void setUmpire2(String umpire2) {
+        this.umpire2 = umpire2;
     }
-
-    
-
-    
 }

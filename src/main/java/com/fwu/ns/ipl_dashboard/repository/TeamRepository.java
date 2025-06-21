@@ -5,9 +5,8 @@ import com.fwu.ns.ipl_dashboard.Model.Team;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface TeamRepository extends CrudRepository<Team,Long>
-{
+public interface TeamRepository extends CrudRepository<Team, Long> {
 
-    Team findByTeamName(String teamName);  
-    
+    Team findByTeamName(String teamName);
+
 }

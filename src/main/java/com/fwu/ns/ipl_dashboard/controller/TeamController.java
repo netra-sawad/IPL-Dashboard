@@ -22,39 +22,32 @@ public class TeamController {
     private TeamRepository teamRepository;
     private MatchRepository matchRepository;
 
-    
 
-    public TeamController(TeamRepository teamRepository,MatchRepository matchRepository) {
+    public TeamController(TeamRepository teamRepository, MatchRepository matchRepository) {
         this.teamRepository = teamRepository;
         this.matchRepository = matchRepository;
     }
-     @GetMapping("/team")
-     public Iterable<Team> getAllTeam(){
-         return this.teamRepository.findAll();
-     }
-     
+
+    @GetMapping("/team")
+    public Iterable<Team> getAllTeam() {
+        return this.teamRepository.findAll();
+    }
+
     @GetMapping("/team/{teamName}")
-    public Team getTeam(@PathVariable String teamName){
+    public Team getTeam(@PathVariable String teamName) {
         Team team = this.teamRepository.findByTeamName(teamName);
         // Pageable pageable = PageRequest.of(0, 4);
         // team.setMatches(matchRepository.getByTeam1OrTeam2OrderByDateDesc(teamName, teamName,pageable));
-        team.setMatches(matchRepository.findLatestMatchesByTeam(teamName,4));
+        team.setMatches(matchRepository.findLatestMatchesByTeam(teamName, 4));
         return team;
-        
+
     }
+
     @GetMapping("/team/{teamName}/matches")
-    public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year)
-    {
-       LocalDate startDate = LocalDate.of(year, 1, 1);
-       LocalDate endDate = LocalDate.of(year+1, 1, 1);
-       return this.matchRepository.getMatchByTeamBetweenDates(teamName, startDate, endDate);
-
-    //    return this.matchRepository.getByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc( teamName, startDate, endDate,
-    //        teamName,
-    //        startDate,
-    //        endDate
-    //    );
-
+    public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year) {
+        LocalDate startDate = LocalDate.of(year, 1, 1);
+        LocalDate endDate = LocalDate.of(year + 1, 1, 1);
+        return this.matchRepository.getMatchByTeamBetweenDates(teamName, startDate, endDate);
     }
-    
+
 }
